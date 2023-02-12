@@ -1,14 +1,7 @@
 public class AlfredTest {
-    /*
-    * This main method will always be the launch point for a Java application
-    * For now, we are using the main to test all our 
-    * AlfredQuotes methods.
-    */
     public static void main(String[] args) {
-        // Make an instance of AlfredQuotes to access all its methods.
         AlfredQuotes alfredBot = new AlfredQuotes();
         
-        // Make some test greetings, providing any necessary data
         String testGreeting = alfredBot.basicGreeting();
         String testGuestGreeting = alfredBot.guestGreeting("Beth Kane");
         String testDateAnnouncement = alfredBot.dateAnnouncement();
@@ -21,15 +14,25 @@ public class AlfredTest {
         String notRelevantTest = alfredBot.respondBeforeAlexis(
             "Maybe that's what Batman is about. Not winning. But failing.."
         );
+
+        //NINJA BONUS
+        String guestGreeting2 = alfredBot.guestGreeting("Beth", "Bruce");
         
-        // Print the greetings to test.
+        //SENSEI BONUS
+        String askAboutBruce = alfredBot.askAboutBruce("Beth", "So, Alfred, what has Bruce been up to nowadays?");
+        String askAboutBruce2 = alfredBot.askAboutBruce("Beth", "What were you like when you were younger?");
+
         System.out.println(testGreeting);
         
-        // Uncomment these one at a time as you implement each method.
         System.out.println(testGuestGreeting);
         System.out.println(testDateAnnouncement);
-        // System.out.println(alexisTest);
-        // System.out.println(alfredTest);
-        // System.out.println(notRelevantTest);
+        System.out.println(alexisTest);
+        System.out.println(alfredTest);
+        System.out.println(notRelevantTest);
+
+        // NINJA & SENSEI BONUS
+        System.out.println(guestGreeting2);
+        System.out.println(askAboutBruce);
+        System.out.println(askAboutBruce2);
     }
 }
