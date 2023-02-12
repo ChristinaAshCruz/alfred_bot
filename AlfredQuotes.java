@@ -2,19 +2,23 @@ import java.util.Date;
 
 public class AlfredQuotes {
     
+    private String name;
+
     public String basicGreeting() {
         // You do not need to code here, this is an example method
         return "Hello, lovely to see you. How are you?";
     }
     
     public String guestGreeting(String name) {
-        // YOUR CODE HERE
-        return "place holder for guest greeting return string";
+        this.name = name;
+        String guestGreetingOutput = String.format("Hello, %s. Lovely to see you.", name);
+        return guestGreetingOutput;
     }
     
     public String dateAnnouncement() {
-        // YOUR CODE HERE
-        return "place holder for date announcement return string";
+        Date date = new Date();
+        String dateAnnouncementOutput = String.format("It is currently %s.", date);
+        return dateAnnouncementOutput;
     }
     
     public String respondBeforeAlexis(String conversation) {
